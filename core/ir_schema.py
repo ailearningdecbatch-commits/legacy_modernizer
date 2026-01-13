@@ -44,7 +44,7 @@ class ModuleIR(BaseModel):
 
 class TechnicalDebt(BaseModel):
     """Technical debt and issues"""
-    category: Literal["performance", "security", "maintainability", "scalability", "compatibility"] = Field(..., description="Issue category")
+    category: Literal["performance", "security", "maintainability", "scalability", "compatibility", "logging"] = Field(..., description="Issue category")
     description: str = Field(..., description="What the issue is")
     severity: Literal["low", "medium", "high", "critical"] = Field(..., description="How severe")
     recommendation: str = Field(..., description="How to fix it")
